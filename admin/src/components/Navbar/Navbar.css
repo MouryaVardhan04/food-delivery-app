@@ -3,10 +3,70 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 4%;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
 }
-.navbar .logo{
-    width: max(10%,80px);
+
+/* Brand/Logo Section */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
-.navbar .profile{
+
+.navbar-logo{
+    width: max(4%,40px);
+    height: auto;
+    display: block;
+}
+
+.navbar-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Profile Section */
+.navbar-profile {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-profile-image{
     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 2%;
+    }
+    
+    .navbar-logo {
+        width: max(5%,35px);
+    }
+    
+    .navbar-title {
+        font-size: 18px;
+    }
+    
+    .navbar-profile-image {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-title {
+        display: none;
+    }
+    
+    .navbar-logo {
+        width: max(6%,30px);
+    }
 }
